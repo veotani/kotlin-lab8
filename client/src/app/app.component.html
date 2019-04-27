@@ -1,0 +1,11 @@
+<input #searchQuery>
+<button (click)='getValueByKey(searchQuery.value)'>Search</button>
+<div *ngIf="recivedData != ''">
+  Result: 
+  <input #currentValue value='{{recivedData}}'>
+  <button (click)='setValueByKey(currentValue.value)'>Поменять</button>
+</div>
+
+<div *ngIf="errorMessage != ''">
+  {{errorMessage}}
+</div>
